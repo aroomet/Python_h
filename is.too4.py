@@ -3,9 +3,18 @@
 #10.01.23
 
 kassa = 0
-fail = open("myndid.txt")
-for mynt in fail:
-    print(mynt)
+def pronksikarva_summa(fail):
+    fail = open("myndid.txt")
+    for mynt in fail:
+        if int(mynt)<10:
+            print(mynt, end="")
+            kassa += int(mynt)
+        print("\Kassas: ", kassa)
+
+
+
+pronksikarva_summa("myndid.txt")
+
 
 
 
